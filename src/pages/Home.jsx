@@ -11,26 +11,29 @@ import { Footer } from "../components/Footer";
 
 export const Home = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Theme Toggle */}
-      <ThemeToggle />
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
       {/* Background Effects */}
       <OceanicBackground />
+      
+      {/* Layout Structure */}
+      <div className="flex flex-col min-h-screen">
+        {/* Navbar and Theme Toggle */}
+        <Navbar />
+        <ThemeToggle />
+        
+        {/* Main Content */}
+        <main className="flex-grow">
+          <HeroSection />
+          <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <ExperienceSection />
+          <ContactSection />
+        </main>
 
-      {/* Navbar */}
-      <Navbar />
-      {/* Main Content */}
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ExperienceSection />
-        <ContactSection />
-      </main>
-
-      {/* Footer */}
-      <Footer />
+        {/* Footer */}
+        <Footer />
+      </div>
     </div>
   );
 };

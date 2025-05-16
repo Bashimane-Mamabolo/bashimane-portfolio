@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
+@layer base {
+  /* Define extra small screen breakpoint */
+  @media (min-width: 480px) {
+    .xs\:inline {
+      display: inline;
+    }
+    .xs\:block {
+      display: block;
+    }
+    .xs\:flex {
+      display: flex;
+    }
+    .xs\:hidden {
+      display: none;
+    }
+  }
+}
+
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
