@@ -105,7 +105,7 @@ Your portfolio will be available at: [http://localhost:5173](http://localhost:51
 
 ## ☁️ Deployment
 
-This portfolio is deployed using Vercel for seamless, continuous deployment. Any changes pushed to the main branch are automatically deployed to the live site.
+This portfolio is deployed using Vercel for seamless, continuous deployment. Any changes pushed to the master branch are automatically deployed to the live site.
 https://bashimane-portfolio.vercel.app/
 
 ---

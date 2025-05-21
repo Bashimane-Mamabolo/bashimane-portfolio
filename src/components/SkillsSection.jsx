@@ -3,39 +3,39 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", stars: 5, category: "frontend", icon: "💻" },
-  { name: "JavaScript", stars: 5, category: "frontend", icon: "📜" },
-  { name: "React", stars: 5, category: "frontend", icon: "⚛️" },
-  { name: "TypeScript", stars: 4, category: "frontend", icon: "🔷" },
-  { name: "Next.js", stars: 4, category: "frontend", icon: "▲" },
-  { name: "Selenium WebDriver", stars: 4, category: "frontend", icon: "🌐" },
+  { name: "HTML/CSS", category: "frontend", icon: "💻" },
+  { name: "JavaScript", category: "frontend", icon: "📜" },
+  { name: "React", category: "frontend", icon: "⚛️" },
+  { name: "TypeScript", category: "frontend", icon: "🔷" },
+  { name: "Next.js", category: "frontend", icon: "▲" },
+  { name: "Selenium WebDriver", category: "frontend", icon: "🌐" },
 
   // Backend
-  { name: "Java", stars: 4, category: "backend", icon: "☕" },
-  { name: "C#", stars: 4, category: "backend", icon: "🔷" },
-  { name: "SpringBoot", stars: 4, category: "backend", icon: "🍃" },
-  { name: ".NET Core", stars: 4, category: "backend", icon: "🔵" },
-  { name: "C++", stars: 3, category: "backend", icon: "⚙️" },
-  { name: "SQL Server", stars: 4, category: "backend", icon: "🗄️" },
-  { name: "PostgreSQL", stars: 4, category: "backend", icon: "🐘" },
-  { name: "MongoDB", stars: 3, category: "backend", icon: "🍃" },
-  { name: "TDD", stars: 4, category: "backend", icon: "🧪" },
-  { name: "Microsoft Azure", stars: 4, category: "backend", icon: "☁️" },
-  { name: "Postman", stars: 4, category: "backend", icon: "🌐" },
+  { name: "Java", category: "backend", icon: "☕" },
+  { name: "C#", category: "backend", icon: "🔷" },
+  { name: "SpringBoot", category: "backend", icon: "🍃" },
+  { name: ".NET Core", category: "backend", icon: "🔵" },
+  { name: "C++", category: "backend", icon: "⚙️" },
+  { name: "SQL Server", category: "backend", icon: "🗄️" },
+  { name: "PostgreSQL", category: "backend", icon: "🐘" },
+  { name: "MongoDB", category: "backend", icon: "🍃" },
+  { name: "TDD", category: "backend", icon: "🧪" },
+  { name: "Microsoft Azure", category: "backend", icon: "☁️" },
+  { name: "Postman", category: "backend", icon: "🌐" },
 
   // Tools
-  { name: "Git/GitHub", stars: 5, category: "tools", icon: "📊" },
-  { name: "Docker", stars: 4, category: "tools", icon: "🐳" },
-  { name: "Figma", stars: 4, category: "tools", icon: "🎭" },
-  // { name: "VS Code", stars: 5, category: "tools", icon: "📝" },
+  { name: "Git/GitHub", category: "tools", icon: "📊" },
+  { name: "Docker", category: "tools", icon: "🐳" },
+  { name: "Figma", category: "tools", icon: "🎭" },
+  // { name: "VS Code", category: "tools", icon: "📝" },
   
   // Professional Skills
-  { name: "Communication", stars: 5, category: "professional", icon: "🗣️" },
-  { name: "Problem Solving", stars: 5, category: "professional", icon: "🧩" },
-  { name: "Agile/Scrum", stars: 5, category: "professional", icon: "🔄" },
-  { name: "Interpersonal", stars: 4, category: "professional", icon: "👥" },
-  { name: "Conflict Management", stars: 4, category: "professional", icon: "🤝" },
-  { name: "Growth Mindset", stars: 5, category: "professional", icon: "🌱" },
+  { name: "Communication", category: "professional", icon: "🗣️" },
+  { name: "Problem Solving", category: "professional", icon: "🧩" },
+  { name: "Agile/Scrum", category: "professional", icon: "🔄" },
+  { name: "Interpersonal", category: "professional", icon: "👥" },
+  { name: "Conflict Management", category: "professional", icon: "🤝" },
+  { name: "Growth Mindset", category: "professional", icon: "🌱" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools", "professional"];
@@ -46,18 +46,6 @@ const categoryLabels = {
   backend: "Backend Development",
   tools: "Tools & Software",
   professional: "Professional Skills"
-};
-
-const StarRating = ({ rating }) => {
-  return (
-    <div className="flex gap-1">
-      {[...Array(5)].map((_, i) => (
-        <span key={i} className="text-lg text-primary">
-          {i < rating ? "★" : "☆"}
-        </span>
-      ))}
-    </div>
-  );
 };
 
 export const SkillsSection = () => {
@@ -112,9 +100,7 @@ export const SkillsSection = () => {
               >
                 {skill.icon}
               </span>
-              <h3 className="font-medium text-sm text-center mb-1">{skill.name}</h3>
-              
-              <StarRating rating={skill.stars} />
+              <h3 className="font-medium text-sm text-center">{skill.name}</h3>
             </div>
           ))}
         </div>
